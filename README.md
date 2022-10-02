@@ -2,7 +2,7 @@
 
 ## Installation
 
-The installation for FPA Playground is simple because we built it on top of flutter, a cross platform framework by Google. It's as simple as 123: clone the repository, set the working directory to the project, and run flutter! The commands for doing this are listed below, but if you would like to collaborate, we also suggest that you work in VSCode and are using MacOS (as our primary platform is iPadOS).
+The installation for FPA Playground is simple because we built it on top of Flutter, a cross platform framework by Google. It's as simple as 123: clone the repository, set the working directory to the project, and run Flutter! The commands for doing this are listed below, but if you would like to collaborate, we also suggest that you work in VSCode and are using MacOS (as our primary platform is iPadOS).
 
 ### Clone the Repository
 
