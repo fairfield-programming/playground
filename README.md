@@ -1,4 +1,4 @@
-# playground
+# ![FPA Playground](https://raw.githubusercontent.com/fairfield-programming/playground/master/.github/media/banner.svg)
 
 A new Flutter project.
 
