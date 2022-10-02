@@ -2,7 +2,7 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/fairfield-programming/playground)
 ![GitHub contributors](https://img.shields.io/github/contributors/fairfield-programming/playground)
-![GitHub all releases](https://img.shields.io/github/downloads/fairfield-programming/playground/total?color=orange)
+![GitHub all releases](https://img.shields.io/github/downloads/fairfield-programming/playground/total?color=purple)
 ![GitHub Org's stars](https://img.shields.io/github/stars/fairfield-programming?color=yellow)
 ![License](https://img.shields.io/badge/license-FPA%20General%20Code-blue)
 
