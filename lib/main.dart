@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:developer' as developer;
-import 'dart:io' show Platform;
 
 void main() {
   developer.log('Starting Up');
