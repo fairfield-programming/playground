@@ -32,30 +32,6 @@ class MainApp extends StatelessWidget {
       ),
     ];
 
-    if (Platform.isAndroid || Platform.isIOS) {
-      return MediaQuery(
-        data: const MediaQueryData(),
-        child: Directionality(
-          textDirection: TextDirection.ltr,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const <Widget>[
-              Expanded(
-                child: Text(
-                  "Flutter's hot reload helps you quickly and easily experiment, build UIs, add features, and fix bug faster. Experience sub-second reload times, without losing state, on emulators, simulators, and hardware for iOS and Android.",
-                ),
-              ),
-              Bottombar(
-                menuItems: menuItems,
-              ),
-            ],
-          ),
-        ),
-      );
-
-      // Android-specific code
-    }
-
     return MediaQuery(
       data: const MediaQueryData(),
       child: Directionality(
@@ -84,27 +60,6 @@ class MenuItem {
 
   final String label;
   final IconData icon;
-}
-
-class Bottombar extends StatelessWidget {
-  const Bottombar({super.key, required this.menuItems});
-
-  final List<MenuItem> menuItems;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      height: 100,
-      padding: const EdgeInsets.only(bottom: 30),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          ...menuItems.map((e) => BottombarButton(label: e.label, icon: e.icon))
-        ],
-      ),
-    );
-  }
 }
 
 class Sidebar extends StatelessWidget {
@@ -182,57 +137,6 @@ class SidebarHead extends StatelessWidget {
             ],
           )
         ]),
-      ),
-    );
-  }
-}
-
-class BottombarButton extends StatefulWidget {
-  const BottombarButton({super.key, required this.label, required this.icon});
-
-  final String label;
-  final IconData icon;
-
-  @override
-  State<BottombarButton> createState() =>
-      BottombarButtonState(label: label, icon: icon);
-}
-
-class BottombarButtonState extends State<BottombarButton> {
-  BottombarButtonState({required this.label, required this.icon});
-
-  final String label;
-  final IconData icon;
-
-  bool isHovering = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      onEnter: (a) {
-        setState(() {
-          isHovering = true;
-        });
-      },
-      onExit: (a) {
-        setState(() {
-          isHovering = false;
-        });
-      },
-      child: Container(
-        width: 70,
-        height: 70,
-        decoration: BoxDecoration(
-            borderRadius: const BorderRadius.all(
-              Radius.circular(35.0),
-            ),
-            color: isHovering ? Colors.grey[100] : Colors.white),
-        child: Icon(
-          icon,
-          size: 28,
-          color: Colors.grey[900],
-        ),
       ),
     );
   }
